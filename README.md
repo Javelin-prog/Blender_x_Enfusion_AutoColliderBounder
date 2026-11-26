@@ -10,10 +10,18 @@ A Blender add-on for creating / converting mesh objects into clicks ready collid
   - Capsule collider
   - Cylinder collider
   - Convex collider (from complex mesh)
+  - Convex As Box: a box-shaped collider named as a convex one (e.g. `UCX_`)
 
 - Convert any object(s) mesh(es) into a click ready collider(s) :
   - Convex collider
   - triangle collider
+
+- Naming conventions you can create, edit and delete for your own pipeline
+  - Built-in: `Unity / Enfusion` (UBX, USP, UCL, UCS, UCX, UTM) and `Unreal Engine`
+  - Name pattern with `{type}` and `{name}` tokens, e.g. `{type}_{name}` → `UBX_Rock` or `{name}_{type}` → `Rock_boxcol`
+  - Optional merge pattern with a `{target}` token, e.g. `{type}_{name}_mergecol_{target}`
+  - Collider material per convention (picked by name, created with your color if it doesn't exist in the file)
+  - `Update All Names` renames every collider in the file to the current convention
 
 ## Installation
 
@@ -25,7 +33,10 @@ A Blender add-on for creating / converting mesh objects into clicks ready collid
 
 ## location 
 
-`3D viewport` > `right side` > `Enfusion Tools` > `colliders tools`
+`3D viewport` > `Sidebar (N)` > `Colliders` > `Collider Tools`
+
+Naming conventions are edited in `Collider Tools` > `Naming Conventions` (or in the add-on preferences).
+They are stored in Blender's preferences, so they are shared by all your .blend files.
 
 ## Usage
 
@@ -39,7 +50,7 @@ A Blender add-on for creating / converting mesh objects into clicks ready collid
 
 ## Notes
 
-- The add-on creates a new object as the collider and does not modify the original mesh (except for converting)
+- `Create Collider` creates a new object and never modifies the selected objects; only `Convert To Collider` changes them
 - Convex and triangles colliders are based on the original mesh's geometry, so it is CRUCIAL to simplify the mesh beforehand
 
 ## License

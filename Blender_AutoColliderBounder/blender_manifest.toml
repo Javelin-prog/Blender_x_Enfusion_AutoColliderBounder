@@ -1,0 +1,12 @@
+schema_version = "1.0.0"
+
+id = "auto_collider_bounder"
+version = "2.2.0"
+name = "[JavStud] Auto Collider Bounder"
+tagline = "Bounding colliders with customizable naming conventions"
+maintainer = "'AntiPoney' Jérôme Noël"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+
+license = ["SPDX:GPL-2.0-or-later"]
